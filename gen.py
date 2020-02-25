@@ -28,7 +28,6 @@ if e == 0:
         T=str(args.TEXT)
         O=str(args.output)
         res = ("echo '{}' | dmtxwrite -s s -o '{}'".format(T,O))
-        print (str(res))
         sp.run(str(res), shell=True)
 else:
     print("E:Script ended with error")
