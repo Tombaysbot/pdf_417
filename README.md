@@ -4,8 +4,9 @@ arguments:
 -h  help
 positional arguments:
 [TEXT TO ENCODE]
-[OUTPUT FILE NAME.jpg/.png]
+optional arguments:
+-o --output
 
 example:
 
-python3 gen.py "Hello World" "barcode.jpg"
+python3 gen.py "Hello World" -o "barcode.jpg"
