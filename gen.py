@@ -8,6 +8,7 @@ parser.add_argument('-o','--output', type=str, required=True, help='defines outp
 parser.add_argument('--p417', nargs='?', type=int, default=0, const=1, help= 'defines pdf417 generating')
 parser.add_argument('--dmtx', nargs='?', type=int, default=0, const=1, help= 'defines Data Matrix generating')
 args=parser.parse_args()
+e = 0
 if args.p417 == 1:
     if args.dmtx == 1:
         print("E:Choose only one p417 or dmtx")
