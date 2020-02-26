@@ -1,4 +1,4 @@
-# pdf_417
+# pdf_417_data_matrix
 This is a short script for generating pdf417 barcodes.
 
 arguments:
@@ -10,6 +10,7 @@ positional arguments:
 optional arguments:
 -o --output
 type of barcode --p417 or --dmtx
+-l --length defines length for pdf417 barcodes (optional, default = 4)
 
 example:
 
