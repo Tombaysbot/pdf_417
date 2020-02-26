@@ -7,6 +7,7 @@ parser.add_argument('TEXT', type=str, help='defines text that you going to encod
 parser.add_argument('-o','--output', type=str, required=True, help='defines output path + file. e.g: -o Dir/pic.jpg')
 parser.add_argument('--p417', nargs='?', type=int, default=0, const=1, help= 'defines pdf417 generating')
 parser.add_argument('--dmtx', nargs='?', type=int, default=0, const=1, help= 'defines Data Matrix generating')
+parser.add_argument('-l', '--length', type=int,default=4, help='defines cont of columns in pdf 417 code (optional) default = 4')
 args=parser.parse_args()
 e = 0
 if args.p417 == 1:
@@ -17,9 +18,10 @@ if e == 0:
     if args.p417 == 1:
 # Some data to encode
         text = args.TEXT
+        length = args.length
 
 # Convert to code words
-        codes = encode(text)
+        codes = encode(text, length)
 
 # Generate barcode as image
         image = render_image(codes)  # Pillow Image object
